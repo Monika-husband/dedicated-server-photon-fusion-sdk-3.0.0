@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b65s6e57o7y03"]
+
+[ext_resource type="Script" uid="uid://dhesiro402uoe" path="res://scripts/chat_ui.gd" id="1_ausui"]
+
+[node name="ChatUI" type="Control" unique_id=1870294869]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ausui")
+
+[node name="ChatLog" type="RichTextLabel" parent="." unique_id=588316422]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 244.0
+
+[node name="ChatInput" type="LineEdit" parent="." unique_id=1436458043]
+layout_mode = 0
+offset_top = 246.0
+offset_right = 340.0
+offset_bottom = 277.0

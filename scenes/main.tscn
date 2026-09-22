@@ -1,0 +1,386 @@
+[gd_scene format=3 uid="uid://b45xnw5gyaj3w"]
+
+[ext_resource type="Script" uid="uid://bpka3dxftcd81" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://ovjeowdb760p" path="res://scenes/authority_character_3d.tscn" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://bmh5aiuglhb8y" path="res://scripts/lobby.gd" id="3_tbgi4"]
+[ext_resource type="Script" uid="uid://upc07ww15ur7" path="res://scripts/tab_players.gd" id="3_tefeu"]
+[ext_resource type="Texture2D" uid="uid://ru7rw4mraxng" path="res://5деняк.jpg" id="4_o6xl0"]
+[ext_resource type="Script" uid="uid://dhesiro402uoe" path="res://scripts/chat_ui.gd" id="5_tbgi4"]
+[ext_resource type="FontFile" uid="uid://bdwvjy434e4r3" path="res://fonts/Carton Six RUS/CartonSixRUS-Regular.ttf" id="5_tipki"]
+[ext_resource type="Texture2D" uid="uid://bq5veey01u4sr" path="res://chan.png" id="7_o6xl0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_mode = 2
+sky = SubResource("Sky_h2yge")
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_s1fef"]
+size = Vector3(10.167969, 0.09765625, 10.325928)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(10.167969, 0.09765625, 10.325928)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tipki"]
+bg_color = Color(0, 0.5735449, 0.540387, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85g3d"]
+bg_color = Color(0, 0.3699189, 0.34867615, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_choun"]
+bg_color = Color(0, 0.8521876, 0.80683494, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_om1y5"]
+bg_color = Color(1.1310726e-05, 0.6042911, 0.12134487, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tefeu"]
+bg_color = Color(0, 0.4346402, 0.07620717, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6xl0"]
+bg_color = Color(0, 0.73292613, 0.15613794, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ya4ey"]
+bg_color = Color(1, 0, 0.3333335, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8y0u"]
+bg_color = Color(0.5765289, 0, 0.1774433, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
+bg_color = Color(1, 0.2987234, 0.41749102, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb6dy"]
+bg_color = Color(1, 0, 0.3333335, 0.105882354)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trceg"]
+bg_color = Color(2.0319695, 0, 0.7131898, 0.050980393)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="FusionReplicationConfig" id="FusionReplicationConfig_tbgi4"]
+property_count = 2
+properties/0/path = NodePath("ChatLog:text")
+properties/0/max_array_capacity = 0
+properties/0/interface_tag = ""
+properties/0/interpolate = 0
+properties/0/element_type = 0
+properties/0/element_class_name = ""
+properties/1/path = NodePath("ChatLog:text_direction")
+properties/1/max_array_capacity = 0
+properties/1/interface_tag = ""
+properties/1/interpolate = 0
+properties/1/element_type = 0
+properties/1/element_class_name = ""
+
+[node name="Main" type="Node3D" unique_id=27092442]
+script = ExtResource("1_jyhfs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1435598541]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1922665888]
+environment = SubResource("Environment_1bvp3")
+
+[node name="FusionSpawner" type="FusionSpawner" parent="." unique_id=1562761935]
+spawnable_scenes = Array[PackedScene]([ExtResource("2_jyhfs")])
+
+[node name="Characters" type="Node3D" parent="." unique_id=2106818956]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=973037688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.1689496, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=46891503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.45117188, 0)
+mesh = SubResource("BoxMesh_s1fef")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=319294903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.45117188, 0)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="TabPlayers" type="Control" parent="." unique_id=184926664]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_tefeu")
+
+[node name="leave" type="Button" parent="TabPlayers" unique_id=878214029]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 435.0
+offset_right = 1127.0
+offset_bottom = 466.0
+text = "leave lobby"
+
+[node name="tab" type="Panel" parent="TabPlayers" unique_id=52723012]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 165.0
+offset_right = 1127.0
+offset_bottom = 435.0
+
+[node name="container" type="VBoxContainer" parent="TabPlayers/tab" unique_id=394282360]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 225.0
+
+[node name="lobby" type="Control" parent="." unique_id=1456264437]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_tbgi4")
+
+[node name="RoomList" type="ItemList" parent="lobby" unique_id=924574520]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 328.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+
+[node name="RefreshButton" type="Button" parent="lobby" unique_id=2097253955]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 337.0
+offset_right = 328.0
+offset_bottom = 373.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_tipki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_85g3d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_choun")
+text = "Refresh"
+
+[node name="JoinButton" type="Button" parent="lobby" unique_id=746521453]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 292.0
+offset_right = 328.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_om1y5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tefeu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o6xl0")
+text = "Join"
+
+[node name="CreatePrivateButton" type="Button" parent="lobby" unique_id=1970425699]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 379.0
+offset_right = 183.0
+offset_bottom = 417.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_ya4ey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a8y0u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jkv2x")
+text = "Create/Join Private"
+
+[node name="PasswordInput" type="LineEdit" parent="lobby" unique_id=1210709656]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 379.0
+offset_right = 328.0
+offset_bottom = 417.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_eb6dy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_trceg")
+placeholder_text = "code"
+alignment = 1
+
+[node name="NicknameInput" type="LineEdit" parent="lobby" unique_id=607430230]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 12.0
+offset_right = 1133.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+placeholder_text = "username"
+alignment = 1
+editable = false
+
+[node name="StatusLabel" type="Label" parent="lobby" unique_id=400766965]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 13.0
+offset_right = 450.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+text = "тут будут логи"
+
+[node name="5Деняк" type="Sprite2D" parent="lobby" unique_id=498506458]
+position = Vector2(983, 441)
+scale = Vector2(0.240625, 0.35204855)
+texture = ExtResource("4_o6xl0")
+
+[node name="tg" type="Button" parent="lobby" unique_id=1620236621]
+layout_mode = 0
+offset_left = 829.0
+offset_top = 559.0
+offset_right = 1137.0
+offset_bottom = 636.0
+theme_override_fonts/font = ExtResource("5_tipki")
+text = "моя тг инфа
+monikadevlog/monikadevlog
+my info telegram"
+
+[node name="Label" type="Label" parent="lobby" unique_id=600219023]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 52.0
+offset_right = 977.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("5_tipki")
+theme_override_font_sizes/font_size = 21
+text = "Steam Username
+включи Steam чтобы появился!!!!!"
+
+[node name="ChatUI" type="Control" parent="." unique_id=1870294869]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_tbgi4")
+
+[node name="ChatLog" type="RichTextLabel" parent="ChatUI" unique_id=588316422]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 244.0
+
+[node name="ChatInput" type="LineEdit" parent="ChatUI" unique_id=1436458043]
+layout_mode = 0
+offset_top = 246.0
+offset_right = 340.0
+offset_bottom = 277.0
+
+[node name="FusionServerReplicator" type="FusionServerReplicator" parent="ChatUI" unique_id=1141142680]
+replication_config = SubResource("FusionReplicationConfig_tbgi4")
+process_priority = -2147483647
+process_physics_priority = -2147483647
+
+[node name="chan" type="Sprite2D" parent="." unique_id=1628295007]
+position = Vector2(146.99998, 533)
+scale = Vector2(0.20646068, 0.20995475)
+texture = ExtResource("7_o6xl0")
+
+[connection signal="pressed" from="TabPlayers/leave" to="TabPlayers" method="_on_leave_pressed"]
+[connection signal="pressed" from="lobby/tg" to="lobby" method="_on_tg_pressed"]

@@ -1,0 +1,3 @@
+„Fusion Godot" is proprietary software governed by the Photon license terms, which can be found at https://dashboard.photonengine.com/en-us/Account/LicenseTerms
+
+The Software includes certain third-party – inter alia open source – components. These third-party inclusions and their respective license terms are detailed in the accompanying „THIRD_PARTY_NOTICES.txt" file distributed with the Software.

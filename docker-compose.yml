@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # --- БАЗА ДАННЫХ POSTGRESQL ---
+  postgres_db:
+	image: postgres:16-alpine
+	container_name: game_postgres
+	restart: always
+	environment:
+	  POSTGRES_DB: gamedb
+	  POSTGRES_USER: game_admin
+	  POSTGRES_PASSWORD: StrongPassword123!
+	volumes:
+	  - db_data:/var/lib/postgresql/data
+	# ПОРТ 5432 НЕ ПРОБРАСЫВАЕТСЯ НАРУЖУ! 
+	# Доступ к БД есть ТОЛЬКО у контейнеров внутри сети game_net (Защита от взлома).
+	networks:
+	  - game_net
+
+  # --- DEDICATED SERVER GODOT ---
+  godot_server:
+	build: .
+	container_name: game_dedicated_server
+	restart: always
+	environment:
+	  - ROOM_NAME=VPS_Official_Server_1
+	  - DB_HOST=postgres_db
+	  - DB_PORT=5432
+	  - DB_NAME=gamedb
+	  - DB_USER=game_admin
+	  - DB_PASSWORD=StrongPassword123!
+	depends_on:
+	  - postgres_db
+	# Открываем порты для игроков (при необходимости прямого сокет-соединения)
+	ports:
+	  - "7777:7777/udp"
+	networks:
+	  - game_net
+
+volumes:
+  db_data:
+
+networks:
+  game_net:
+	driver: bridge

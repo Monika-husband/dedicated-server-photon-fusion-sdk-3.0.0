@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://tmichmmp8ltw"]
+
+[ext_resource type="Script" uid="uid://cdxvn3hr200r" path="res://scripts/player_tab.gd" id="1_7olov"]
+[ext_resource type="Texture2D" uid="uid://cbwpb8donrnvf" path="res://dsGodot.png" id="2_1vgi3"]
+
+[sub_resource type="FusionReplicationConfig" id="FusionReplicationConfig_7olov"]
+property_count = 1
+properties/0/path = NodePath("name:text")
+properties/0/max_array_capacity = 0
+properties/0/interface_tag = ""
+properties/0/interpolate = 0
+properties/0/element_type = 0
+properties/0/element_class_name = ""
+
+[node name="PlayerTab" type="Control" unique_id=275612395]
+custom_minimum_size = Vector2(100, 42)
+custom_maximum_size = Vector2(200, 42)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 42.0
+scale = Vector2(0.625, 0.625)
+script = ExtResource("1_7olov")
+
+[node name="name" type="Label" parent="." unique_id=516662317]
+layout_mode = 0
+offset_left = 41.600006
+offset_right = 223.0
+offset_bottom = 41.6
+theme_override_font_sizes/font_size = 20
+text = "username"
+vertical_alignment = 1
+
+[node name="FusionServerReplicator" type="FusionServerReplicator" parent="." unique_id=866725693]
+owner_mode = 5
+replication_config = SubResource("FusionReplicationConfig_7olov")
+process_priority = -2147483647
+process_physics_priority = -2147483647
+
+[node name="avatar" type="TextureRect" parent="." unique_id=1624402981]
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(42, 42)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1vgi3")
+expand_mode = 1
+stretch_mode = 4

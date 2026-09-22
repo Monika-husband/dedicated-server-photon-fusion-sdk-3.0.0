@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ovjeowdb760p"]
+
+[ext_resource type="Script" uid="uid://bqtoptg2p6xxk" path="res://scripts/authority_character_3d.gd" id="1_gd0q8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s1fef"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s1fef"]
+
+[sub_resource type="FusionReplicationConfig" id="FusionReplicationConfig_qdemr"]
+property_count = 2
+properties/0/path = NodePath("Head:rotation")
+properties/0/max_array_capacity = 0
+properties/0/interface_tag = ""
+properties/0/interpolate = 0
+properties/0/element_type = 0
+properties/0/element_class_name = ""
+properties/1/path = NodePath("Head/Camera3D:rotation")
+properties/1/max_array_capacity = 0
+properties/1/interface_tag = ""
+properties/1/interpolate = 0
+properties/1/element_type = 0
+properties/1/element_class_name = ""
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qdemr"]
+radius = 0.3959961
+height = 0.7919922
+
+[node name="AuthorityCharacter3d" type="CharacterBody3D" unique_id=2056979989]
+script = ExtResource("1_gd0q8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1565962253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_s1fef")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1157628697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_s1fef")
+
+[node name="FusionServerReplicator" type="FusionServerReplicator" parent="." unique_id=400018058]
+owner_mode = 5
+replication_config = SubResource("FusionReplicationConfig_qdemr")
+root_replication_mode = 1
+process_priority = -2147483647
+process_physics_priority = -2147483647
+
+[node name="Head" type="Node3D" parent="." unique_id=730302754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6359389, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1733474977]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Head/Camera3D" unique_id=286738257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13646364, -0.30388308)
+mesh = SubResource("CapsuleMesh_qdemr")
+
+[node name="StandRayCast" type="RayCast3D" parent="Head" unique_id=9004766]
+target_position = Vector3(0, 0.6, 0)
+collision_mask = 3
+
+[node name="NicknameLabel" type="Label3D" parent="." unique_id=1043879105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1596353, 0)
+billboard = 1
